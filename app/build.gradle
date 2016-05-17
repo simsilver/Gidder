@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 22
+    buildToolsVersion "23.0.3"
 
     defaultConfig {
         applicationId "net.antoniy.gidder.beta"
         minSdkVersion 7
-        targetSdkVersion 21
+        targetSdkVersion 22
     }
 
     buildTypes {
@@ -35,10 +35,10 @@ android {
 }
 
 dependencies {
-    compile 'com.android.support:support-v4:21.0.+'
+    compile 'com.android.support:support-v4:22.0.0'
     compile 'com.actionbarsherlock:actionbarsherlock:4.4.0@aar'
     compile 'com.j256.ormlite:ormlite-android:4.48'
-    compile 'org.apache.sshd:sshd-core:0.13.0'
+    compile 'org.apache.sshd:sshd-core:0.14.0'
     compile 'org.apache.mina:mina-core:2.0.9'
     compile 'org.eclipse.jgit:org.eclipse.jgit:3.6.0.201411121045-m1'
     compile 'commons-validator:commons-validator:1.4.0'

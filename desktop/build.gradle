@@ -1,0 +1,10 @@
+apply plugin: 'java'
+
+dependencies {
+    compile 'org.apache.sshd:sshd-core:0.14.0'
+    compile 'org.apache.mina:mina-core:2.0.9'
+    compile 'org.eclipse.jgit:org.eclipse.jgit:3.6.0.201411121045-m1'
+    compile 'commons-validator:commons-validator:1.4.0'
+    compile 'org.bouncycastle:bcprov-jdk16:1.46'
+    compile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.21'
+}
