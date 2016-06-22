@@ -20,9 +20,11 @@ public class SplashScreenActivity extends BaseActivity {
         	SplashScreenActivity.this.finish();
         }
     };
-	
+	private long mLastClickTime;
+
 	@Override
 	protected void setup() {
+		mLastClickTime = -1L;
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.splash_screen);
 	}
@@ -43,6 +45,13 @@ public class SplashScreenActivity extends BaseActivity {
 			handler.removeCallbacks(timeoutRunnable);
 			finish();
 			startActivity(new Intent(C.action.START_DONATE_ACTIVITY));
+		} else {
+			if (mLastClickTime > 0 && System.currentTimeMillis() - mLastClickTime < 1000L) {
+				handler.removeCallbacks(timeoutRunnable);
+				timeoutRunnable.run();
+			} else {
+				mLastClickTime = System.currentTimeMillis();
+			}
 		}
 	}
 }

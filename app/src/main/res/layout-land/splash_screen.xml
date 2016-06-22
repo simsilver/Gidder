@@ -5,6 +5,7 @@
     android:layout_height="fill_parent"
     android:background="@drawable/menu_bg"
     android:gravity="center"
+    android:onClick="onClick"
     android:orientation="horizontal" >
 
     <LinearLayout
